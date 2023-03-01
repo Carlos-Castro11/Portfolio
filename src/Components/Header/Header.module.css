@@ -2,19 +2,18 @@
   background: transparent;
   width: 100%;
   height: 5rem;
-  padding: 1.5rem 5rem;
+  display: flex;
+  place-content: center;
+  padding: 1rem 0.5rem;
 }
 
 .nav {
   display: flex;
   gap: 3rem;
-  max-width: 400px;
-  margin: 0 auto;
 }
 
 .btnMobile {
-  width: 40px;
-  height: 40px;
+  padding: 22px;
   border-radius: 50%;
   position: relative;
   border: 2px solid var(--yellow);
@@ -27,8 +26,8 @@
 .btnMobile::after {
   content: "";
   background: currentColor;
-  width: 60%;
-  height: 1.5px;
+  width: 55%;
+  height: 1.8px;
   position: absolute;
   transform: translateX(-50%);
   box-shadow: 0px 7px 0px currentColor, 0px -7px 0px currentColor;
@@ -63,6 +62,7 @@
 
 @media (max-width: 550px) {
   .header {
-    padding: 1.5rem 0rem 1.5rem 22rem;
+    place-content: end;
+    padding: 1.5rem 2rem;
   }
 }

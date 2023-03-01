@@ -7,23 +7,25 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <nav>
-        {mobile ? <button className={styles.btnMobile}></button> : null}
-        <ul className={`${mobile ? styles.navMobile : styles.nav}`}>
-          <li className={styles.navItem}>
-            <a href="#home">Home</a>
-          </li>
-          <li className={styles.navItem}>
-            <a href="#home">Sobre</a>
-          </li>
-          <li className={styles.navItem}>
-            <a href="#home">Portfolio</a>
-          </li>
-          <li className={styles.navItem}>
-            <a href="#home">Contato</a>
-          </li>
-        </ul>
-      </nav>
+      <div>
+        <nav className={styles.headerItems}>
+          {mobile ? <button className={styles.btnMobile}></button> : null}
+          <ul className={`${mobile ? styles.navMobile : styles.nav}`}>
+            <li className={styles.navItem}>
+              <a href="#home">Home</a>
+            </li>
+            <li className={styles.navItem}>
+              <a href="#home">Sobre</a>
+            </li>
+            <li className={styles.navItem}>
+              <a href="#home">Portfolio</a>
+            </li>
+            <li className={styles.navItem}>
+              <a href="#home">Contato</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 };
