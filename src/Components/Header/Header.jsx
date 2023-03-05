@@ -8,7 +8,7 @@ const Header = () => {
 
   React.useEffect(() => {
     function handleMobile() {
-      if (!mobile) setMobileActive(false);
+      if (mobile === true) setMobileActive(false);
     }
     window.addEventListener("resize", handleMobile);
     return () => {

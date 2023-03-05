@@ -6,6 +6,7 @@
   background-attachment: fixed;
   height: 100vh;
   position: relative;
+  box-shadow: inset 0px 0px 3px var(--white);
 }
 
 .banner::after {
@@ -25,4 +26,35 @@
     rgba(255, 255, 255, 0.8),
     white
   );
+}
+
+.banner .clouds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.banner .clouds img {
+  position: absolute;
+  bottom: 0;
+  max-width: 100%;
+  animation: animate calc(3s * var(--i)) linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  25%,
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3);
+  }
 }
