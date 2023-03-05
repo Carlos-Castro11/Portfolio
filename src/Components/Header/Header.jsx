@@ -4,23 +4,45 @@ import useMedia from "../../Hooks/useMedia";
 
 const Header = () => {
   const mobile = useMedia("(max-width: 550px)");
+  const [mobileActive, setMobileActive] = React.useState(false);
+
+  React.useEffect(() => {
+    function handleMobile() {
+      if (!mobile) setMobileActive(false);
+    }
+    window.addEventListener("resize", handleMobile);
+    return () => {
+      window.removeEventListener("resize", handleMobile);
+    };
+  }, [mobile]);
 
   return (
     <header className={styles.header}>
       <div>
         <nav className={styles.headerItems}>
-          {mobile ? <button className={styles.btnMobile}></button> : null}
-          <ul className={`${mobile ? styles.navMobile : styles.nav}`}>
-            <li className={styles.navItem}>
-              <a href="#home">Home</a>
+          {mobile ? (
+            <button
+              onClick={() => setMobileActive(!mobileActive)}
+              className={`${styles.btnMobile} ${
+                mobileActive && styles.btnMobileActive
+              }`}
+            ></button>
+          ) : null}
+          <ul
+            className={`${mobile ? styles.navMobile : styles.nav} ${
+              mobileActive && styles.navMobileActive
+            }`}
+          >
+            <li className={`${mobile ? styles.navItemMobile : styles.navItem}`}>
+              <a href="#home">Início</a>
             </li>
-            <li className={styles.navItem}>
+            <li className={`${mobile ? styles.navItemMobile : styles.navItem}`}>
               <a href="#home">Sobre</a>
             </li>
-            <li className={styles.navItem}>
+            <li className={`${mobile ? styles.navItemMobile : styles.navItem}`}>
               <a href="#home">Portfolio</a>
             </li>
-            <li className={styles.navItem}>
+            <li className={`${mobile ? styles.navItemMobile : styles.navItem}`}>
               <a href="#home">Contato</a>
             </li>
           </ul>

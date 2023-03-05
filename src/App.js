@@ -12,6 +12,7 @@ function App() {
         <Header />
         <Hero />
       </Banner>
+      <div style={{ height: "800px" }}>Teste</div>
     </>
   );
 }
