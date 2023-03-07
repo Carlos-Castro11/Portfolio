@@ -4,6 +4,8 @@ import "./App.css";
 import Banner from "./Components/Banner/Banner";
 import Header from "./Components/Header/Header";
 import Hero from "./Components/Hero/Hero";
+import About from "./Components/About/About";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -12,7 +14,8 @@ function App() {
         <Header />
         <Hero />
       </Banner>
-      <div style={{ height: "800px" }}>Teste</div>
+      <About />
+      <Footer />
     </>
   );
 }

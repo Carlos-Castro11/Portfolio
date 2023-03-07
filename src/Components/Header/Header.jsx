@@ -37,7 +37,7 @@ const Header = () => {
               <a href="#home">Início</a>
             </li>
             <li className={`${mobile ? styles.navItemMobile : styles.navItem}`}>
-              <a href="#home">Sobre</a>
+              <a href="#about">Sobre</a>
             </li>
             <li className={`${mobile ? styles.navItemMobile : styles.navItem}`}>
               <a href="#home">Portfolio</a>

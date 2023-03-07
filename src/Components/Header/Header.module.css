@@ -99,37 +99,25 @@
   color: var(--yellow);
   font-size: 1.2rem;
   position: relative;
-  text-shadow: 0px 0px 10px var(--white);
+  text-shadow: 0px 0px 10px var(--yellow);
   padding: 0.2rem;
   transition: 0.3s ease-in-out;
 }
 
 .navItem a::before {
   content: "";
-  background: var(--white);
-  height: 100%;
-  width: 100%;
+  background: var(--yellow);
+  height: 1.6px;
+  width: 0%;
+  bottom: 0px;
   position: absolute;
   transition: all 0.3s ease-in-out;
-  bottom: -1.2rem;
-  filter: blur(8px);
-  opacity: 0.5;
-  transform: perspective(1.1em) rotateX(40deg);
-  pointer-events: none;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.navItem a:hover,
-.navItem a:focus {
-  outline: none;
-  border: none;
-  text-shadow: 0px 0px 20px var(--yellow);
-}
-
-.navItem a:hover::before,
-.navItem a:focus::before {
-  transform: perspective(0.8em) rotateX(40deg);
-  background: var(--yellow);
-  opacity: 0.7;
+.navItem a:hover::before {
+  width: 100%;
 }
 
 @media (max-width: 550px) {

@@ -40,7 +40,7 @@
 
 .banner .clouds img {
   position: absolute;
-  bottom: 0;
+  bottom: 0rem;
   max-width: 100%;
   animation: animate calc(3s * var(--i)) linear infinite;
 }
@@ -56,5 +56,11 @@
   }
   100% {
     transform: scale(3);
+  }
+}
+
+@media (max-width: 1000px) {
+  .banner .clouds img {
+    bottom: -5rem;
   }
 }

@@ -1,0 +1,50 @@
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.about::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, darkblue, transparent);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.person {
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  font-family: var(--type-second);
+}
+
+.skills {
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  gap: 3rem;
+}
+
+.person img {
+  border-radius: 50%;
+  max-width: 50%;
+  box-shadow: 0px 0px 10px black;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .about::after {
+    height: 2px;
+    width: 100%;
+    top: 44%;
+    background: linear-gradient(45deg, transparent, darkblue, transparent);
+  }
+}
